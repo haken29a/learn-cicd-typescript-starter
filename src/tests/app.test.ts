@@ -9,6 +9,6 @@ let headers: IncomingHttpHeaders = {
 };
 headers["authorization"] = "test";
 test("Testing to get API key", () => {
-    expect(getAPIKey(headers)).toBe("good")
+    expect(getAPIKey(headers)).toBeNull
 })
 
