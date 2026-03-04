@@ -43,3 +43,5 @@ jobs:
       - name: Run Style Test
         run: npm run format:check
 
+      - name: Run Lint Test
+        run: npm run lint
