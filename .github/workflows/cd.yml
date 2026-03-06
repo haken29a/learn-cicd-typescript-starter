@@ -1,12 +1,11 @@
-name: Style
-
 on:
-  pull_request:
+  push:
     branches: [main]
+name: ci
 
 jobs:
-  tests:
-    name: Style Tests
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
 
     steps:
@@ -21,5 +20,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run Style Test
-        run: npm run format:check
+      - name: Building
+        run: npm run build
